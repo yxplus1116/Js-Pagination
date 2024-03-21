@@ -1,8 +1,4 @@
 "use strict";
-/**
- * @author 小秋秋
- * @time 2020-09-11
- */
 var __spreadArrays = (this && this.__spreadArrays) || function () {
     for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
     for (var r = Array(s), k = 0, i = 0; i < il; i++)
@@ -48,7 +44,6 @@ var Pagination = /** @class */ (function () {
         this.prev = null;
         this.next = null;
         this.input = null;
-        this.pageNum = 0;
         if (this.validate(options)) {
             this.init(options);
         }
@@ -76,6 +71,13 @@ var Pagination = /** @class */ (function () {
             this.options.pageIndex = 1;
         // 主体容器
         var container = this.createElement('div', '_page_container');
+        
+        // 总条数
+        var totalLenth = this.createElement('span', '_total_', this.options.total)
+        totalLenth.innerText = '共' + this.options.total + '条';
+        totalLenth.style.color  = '#342b2b'
+        container.appendChild(totalLenth);
+
         // 页码容器
         var ul = this.createElement('ul', ['_pages', "_pages_" + this.options.type]);
         // 禁用上一页

@@ -1,7 +1,3 @@
-/**
- * @author 小秋秋
- * @time 2020-09-11
- */
 
 interface IPagination {
     options: IPaginationOptions
