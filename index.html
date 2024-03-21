@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <link rel="stylesheet" href="./css/pagination.css">
+    <script src="./js/pagination.js"></script>
+</head>
+<body>
+    <div id="pages">
+        
+    </div>
+    <div id="pages_1" style="margin-top:100px">
+        
+    </div>
+</body>
+</html>
+<script>
+    new Pagination({
+        element: '#pages',
+        type: 1,
+        pageIndex: 1,
+        pageSize: 10,
+        pageCount: 5,
+        total: 100,
+        jumper: true,
+        singlePageHide: false,
+        prevText: '上一页',
+        nextText: '下一页',
+        disabled: true,
+        currentChange: function(index) {
+            // console.log(index);
+        }
+    });
+    new Pagination({
+        element: '#pages_1',
+        type: 2,
+        pageIndex: 1,
+        pageSize: 5,
+        pageCount: 9,
+        total: 100,
+        jumper: true,
+        singlePageHide: false,
+        disabled: true,
+        currentChange: function(index) {
+            console.log(index);
+        }
+    });
+</script>
