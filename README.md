@@ -10,8 +10,7 @@
 
 ## 使用
 
-```
-javascript
+```javascript
 const pagination = new Pagination({
     element: '#pagination-container',
     type: 1,
@@ -50,7 +49,7 @@ const pagination = new Pagination({
 ```html
 <div id="pagination-container"></div>
 
-javascript
+js：
 const pagination = new Pagination({
     element: '#pagination-container',
     type: 1,
